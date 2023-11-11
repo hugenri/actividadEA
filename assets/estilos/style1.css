@@ -1,0 +1,25 @@
+
+body {
+  margin: 0em;
+  padding: 0em;
+  background: #fdffff;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:#69a5f3;
+  }
+    .carousel-item {
+      height: 40vh;
+    }
+    .carousel-item img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+#texto{
+
+  text-align: justify;
+}
+
+.same-size {
+  max-height: 300px; /* altura máxima de las imágenes */
+  object-fit: cover; /* ajustar la imagen dentro del contenedor sin distorsionar */
+}

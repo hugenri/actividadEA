@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Registro de alumno</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link href="assets/estilos/style1.css" rel="stylesheet">
+  
+
+</head>
+<body>
+ <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+      <div class="container">
+       
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="registrarse.html">Registrarse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.php">Iniciar sesión</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      <div class="container mt-7 mb-6"><!-- para crear un espacio -->
+        <p class="mb-7">&nbsp &nbsp &nbsp</p>
+      </div>
+      <div class="container mt-7 mb-6">
+        <p class="mb-9">&nbsp &nbsp &nbsp</p>
+      </div>
+     
+      <div class="container mt-9 mb-7">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 col-md-8 col-sm-8">
+            <div class="card border-0 shadow-lg p-4">
+              <h4 class="text-center mb-3">Formulario de registro</h4>
+                <form id="registro-form">
+                  <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ingrese nombre" >
+                </div>
+                <div class="mb-1">
+                    <label for="email" class="form-label">Apellido paterno</label>
+                    <input type="text" class="form-control" id="apellidoP" name="apellidoP" placeholder="Ingrese el apellido paterno">
+                </div>
+                <div class="mb-1">
+                    <label for="contrasena" class="form-label">Apellido materno</label>
+                    <input type="text" class="form-control" id="apellidoM" name="apellidoM" placeholder="Ingrese el apellido materno">
+                </div>
+                <div class="mb-1">
+                  <label for="nombre" class="form-label">Matricula</label>
+                  <input type="text" class="form-control" id="matricula" name="matricula" placeholder="4444">
+              </div>
+              <div class="mb-1">
+                <label for="nombre" class="form-label">Tipo de usuario</label>
+                <input type="text" class="form-control" id="tipoUsuario" name="tipoUsuario" placeholder="AL">
+            </div>
+            <div class="mb-1">
+              <label for="nombre" class="form-label">Turno</label>
+              <input type="text" class="form-control" id="turno" name="turno" placeholder="matutino/vespertino">
+          </div>
+          <div class="mb-1">
+            <label for="contrasena" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="letras, numeros y caracteres especiales">
+        </div>
+        <div class="mb-3">
+          <label for="contrasena" class="form-label">Confirmación password</label>
+          <input type="password" class="form-control" id="passwordC" name="passwordC" placeholder="Repita el mismo password anterior">
+      </div>
+                    <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      <script src="https://www.google.com/recaptcha/api.js?render=6LdYBvwkAAAAAL959jU8V_nCal2q3X75GSTvEfnA"></script>
+      <script>
+          grecaptcha.ready(function() {
+              grecaptcha.execute('6LdYBvwkAAAAAL959jU8V_nCal2q3X75GSTvEfnA', {action: 'registro'})
+                  .then(function(token) {
+                      document.getElementById('registro-form').insertAdjacentHTML('beforeend', '<input type="hidden" name="recaptcha" value="' + token + '">');
+                  });
+          });
+      </script>
+  
+      <script src="assets/JS/registro.js"></script>
+  
+  <div class="container mt-7 mb-6"><!-- para crear un espacio -->
+    <p class="mb-9">&nbsp &nbsp &nbsp</p>
+  </div>
+  <footer class="bg-dark text-white mt-7">
+  <div class="container py-3">
+    <div class="row">
+      <div class="col-md-6">
+        <p>&copy; 2023 DPW2</p>
+      </div>
+     
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
